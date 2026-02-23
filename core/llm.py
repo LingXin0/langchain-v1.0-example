@@ -9,7 +9,7 @@ from core.config import settings
 
 def get_model_openai(stop_args: List[str] = None):
     return ChatOpenAI(
-        model_name=settings.LLM_MODEL_NAME,
+        model_name="gpt-5.2-pro",
         api_key=settings.LLM_API_KEY
     )
 

@@ -13,5 +13,5 @@ response = client.invoke("who are you!")
 print(response.content)
 
 # %%
-model_anthropic = get_model_anthropic()
-model_anthropic.abatch("who are you!")
+# model_anthropic = get_model_anthropic()
+# model_anthropic.batch("who are you!")
