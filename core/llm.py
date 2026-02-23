@@ -1,5 +1,6 @@
 from typing import List
 
+from daytona import DaytonaConfig
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_anthropic import ChatAnthropic
 from langchain_google_genai import ChatGoogleGenerativeAI
@@ -23,12 +24,11 @@ def get_model_open_router():
 
 def get_model_anthropic(stop_args: List[str] = None):
     return ChatAnthropic(
-        model_name="claude-sonnet-4-5",
+        model_name="claude-sonnet-4-6",
         api_key=settings.ANTHROPIC_API_KEY,
         timeout=60.0,
         stop=stop_args,
         streaming=True,
-        max_tokens_to_sample=32768
     )
 
 
@@ -43,4 +43,10 @@ def get_openai_embeddings():
     return OpenAIEmbeddings(
         api_key=settings.OPENAI_API_KEY,
         model="text-embedding-3-large"
+    )
+
+
+def get_daytona_config(stop_args: List[str] = None):
+    return DaytonaConfig(
+        api_key=settings.DAYTONA_API_KEY
     )
