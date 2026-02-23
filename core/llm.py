@@ -1,6 +1,6 @@
 from typing import List
 
-from langchain_openai import ChatOpenAI
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_anthropic import ChatAnthropic
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_openrouter import ChatOpenRouter
@@ -36,4 +36,11 @@ def get_model_google_genai():
     return ChatGoogleGenerativeAI(
         model_name="gemini-3.1-pro-preview",
         api_key=settings.GOOGLE_GENAI_API_KEY,
+    )
+
+
+def get_openai_embeddings():
+    return OpenAIEmbeddings(
+        api_key=settings.OPENAI_API_KEY,
+        model="text-embedding-3-large"
     )

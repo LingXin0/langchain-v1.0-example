@@ -24,7 +24,7 @@ langgraph>=0.3.0
 deepagents>=0.4.3
 
 # Vector Stores & Embeddings
-# langchain-chroma>=0.2.0
+langchain-chroma>=0.2.0
 # langchain-pinecone>=0.2.0
 # faiss-cpu>=1.7.0
 langchain-milvus>=0.1.0
