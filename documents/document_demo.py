@@ -23,7 +23,7 @@ exit()
 
 # 2.文档加载器：txt
 '''
-loader = TextLoader("../datas/deepseek.txt", encoding="utf-8")
+loader = TextLoader("../data/deepseek.txt", encoding="utf-8")
 docs = loader.load()
 print(docs)
 print('-' * 100)
@@ -33,7 +33,7 @@ exit()
 
 # 3.文档加载器：docx文件
 '''
-loader = Docx2txtLoader("../datas/行业.docx")
+loader = Docx2txtLoader("../data/行业.docx")
 docs = loader.load()
 print(docs)
 print('-' * 100)
@@ -41,7 +41,7 @@ exit()
 '''
 
 # 4.文档加载器: pdf文件
-loader = PyMuPDFLoader("../datas/Reflexion.pdf")
+loader = PyMuPDFLoader("../data/Reflexion.pdf")
 docs = loader.load()
 # print(docs)
 # print('-' * 100)
