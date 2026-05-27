@@ -11,6 +11,9 @@ class Settings(BaseSettings):
     # Anthropic
     ANTHROPIC_API_KEY: Optional[str] = None
 
+    # Xiao Mi MIMO
+    MIMO_API_KEY: Optional[str] = None
+
     # Google
     GOOGLE_API_KEY: Optional[str] = None
 

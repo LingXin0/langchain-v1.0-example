@@ -109,7 +109,7 @@ backend = DaytonaSandbox(sandbox=sandbox)
 agent = create_deep_agent(
     model=get_model_anthropic(),
     system_prompt="You are a Python coding assistant with sandbox access.",
-    backend=backend,
+    backend=backend
 )
 
 try:
@@ -261,7 +261,7 @@ agent = create_deep_agent(
 result = agent.invoke({
     "messages": [{
         "role": "user",
-        "content": "What's the weather like in Shenzhen, China??"
+        "content": "What's the weather like in Shenzhen, China?"
     }]
 })
 

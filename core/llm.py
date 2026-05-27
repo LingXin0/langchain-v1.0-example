@@ -38,6 +38,17 @@ def get_model_google_genai():
         api_key=settings.GOOGLE_GENAI_API_KEY,
     )
 
+def get_model_mimo(stop_args: List[str] = None):
+    # MiMo 提供 OpenAI 兼容 API,直接复用 ChatOpenAI 指向其 base_url 即可
+    return ChatOpenAI(
+        model_name="mimo-v2.5-pro",          # 以平台实际模型名为准
+        api_key=settings.MIMO_API_KEY,
+        base_url="https://api.xiaomimimo.com/v1",  # 以平台文档实际地址为准
+        timeout=60.0,
+        stop=stop_args,
+        streaming=True,
+    )
+
 
 def get_openai_embeddings():
     return OpenAIEmbeddings(

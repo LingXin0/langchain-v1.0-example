@@ -1,10 +1,10 @@
 # %%
-from core.llm import get_model_anthropic
+from core.llm import get_model_mimo
 from langchain.chat_models import init_chat_model
 from core.config import settings
 
 # %%
-res = get_model_anthropic().invoke("who are you!")
+res = get_model_mimo().invoke("who are you!")
 print(res.content)
 
 # %%
